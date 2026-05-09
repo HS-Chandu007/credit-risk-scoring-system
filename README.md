@@ -135,7 +135,7 @@ credit-risk-scoring-system/
 **Run locally with Docker:**
 
 ```bash
-docker pull <your-dockerhub-username>/credit-risk-system
+docker pull hermitsdocker/credit-risk-system
 docker run -p 8000:8000 credit-risk-system
 ```
 
