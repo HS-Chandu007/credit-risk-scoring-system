@@ -1,0 +1,10 @@
+{
+    "threshold": 0.2217171717171717,
+    "weights": {
+        "xgb": 0.4,
+        "lgbm": 0.6
+    },
+    "model_version": "v1.0",
+    "target": "SeriousDlqin2yrs",
+    "description": "Ensemble credit risk scoring system"
+}
