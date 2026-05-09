@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Credit Risk Scoring System</title>
+
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+
+    <link rel="stylesheet" href="/static/styles.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Credit Risk Scoring System</h1>
+
+        <form
+            hx-post="/predict-ui"
+            hx-target="#result"
+            hx-swap="innerHTML"
+        >
+
+            <input
+                type="number"
+                step="any"
+                name="RevolvingUtilizationOfUnsecuredLines"
+                placeholder="Credit Utilization (0 - 1)"
+                required
+            >
+
+            <input
+                type="number"
+                name="age"
+                placeholder="Age"
+                required
+            >
+
+            <input
+                type="number"
+                name="NumberOfTime30_59DaysPastDueNotWorse"
+                placeholder="30-59 Days Late"
+                required
+            >
+
+            <input
+                type="number"
+                step="any"
+                name="DebtRatio"
+                placeholder="Debt Ratio"
+                required
+            >
+
+            <input
+                type="number"
+                step="any"
+                name="MonthlyIncome"
+                placeholder="Monthly Income"
+                required
+            >
+
+            <input
+                type="number"
+                name="NumberOfOpenCreditLinesAndLoans"
+                placeholder="Open Credit Lines & Loans"
+                required
+            >
+
+            <input
+                type="number"
+                name="NumberOfTimes90DaysLate"
+                placeholder="90+ Days Late"
+                required
+            >
+
+            <input
+                type="number"
+                name="NumberRealEstateLoansOrLines"
+                placeholder="Real Estate Loans"
+                required
+            >
+
+            <input
+                type="number"
+                name="NumberOfTime60_89DaysPastDueNotWorse"
+                placeholder="60-89 Days Late"
+                required
+            >
+
+            <input
+                type="number"
+                name="NumberOfDependents"
+                placeholder="Dependents"
+                required
+            >
+
+            <button type="submit">
+                Assess Credit Risk
+            </button>
+
+        </form>
+
+        <div id="result"></div>
+
+    </div>
+
+</body>
+
+</html>
